@@ -9,7 +9,7 @@ const Signup = () => {
   const URL = "http://localhost:4000/api/auth/register"
 
   const [user, setUser] = useState({
-    username: "",
+    name: "",
     phone: "",
     email: "",
     password: "",
@@ -42,7 +42,7 @@ const Signup = () => {
       console.log("resposne from server", res_data);
     //   console.log(res_data.token)
       setUser({
-        username: "",
+        name: "",
         phone: "",
         email: "",
         password: "",
@@ -68,10 +68,10 @@ const Signup = () => {
             <label htmlFor='Your name'>Your name</label>
             <input
               type='text'
-              name='username'
-              value={user.username}
+              name='name'
+              value={user.name}
               onChange={handleInput}
-              id="username"
+              id="name"
               required
               autoComplete="off"
             />

@@ -1,0 +1,55 @@
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding: 0rem;
+    position: relative;
+    top: -2rem;
+}
+
+.c_logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-left: 5.3rem;
+}
+
+.logo_img {
+    height: 2.5rem;
+}
+
+.logo_text {
+    font-family: Roboto;
+    font-size: 44px;
+    font-weight: 600;
+    letter-spacing: 0em;
+    color: #2E0052;
+}
+
+@media (min-width: 200px) and (max-width: 600px) {
+    .logo {
+        background: #2E0052;
+        position: fixed;
+        top: 0px;
+        width: 100vw;
+        height: 1.2rem;
+        margin: 0px;
+        padding: 1rem;
+        justify-content: left;
+    }
+
+    .logo_img {
+        padding-left: 1rem;
+    }
+
+    .logo_text {
+        font-size: 25px;
+        font-weight: 500;
+        line-height: 21.88px;
+        text-align: left;
+        color: #FFFFFF;
+        padding-left: 0.1rem;
+    }
+}

@@ -41,6 +41,7 @@ const Signup = () => {
       const res_data= await response.json();
       console.log("resposne from server", res_data);
     //   console.log(res_data.token)
+    localStorage.setItem("userToken",res_data.token)
       setUser({
         name: "",
         phone: "",
@@ -49,11 +50,14 @@ const Signup = () => {
       })
       navigate('/')
         }
-    console.log(response);
+        console.log("registered in with ",response);
+    // console.log("user number ",user.phone);
 
     } catch (error) {
       console.log("Resgister",error);
     }
+    console.log("Registered number:", user.phone);
+    localStorage.setItem("userNumber",user.phone)
   }
   const openlogin=()=>{
     navigate('/login'); 

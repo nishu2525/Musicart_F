@@ -55,7 +55,7 @@ const Login = () => {
         console.log("resposne from server", res_data);
         // storeTokenLS(res_data.token)
 
-        // localStorage.setItem(res_data)
+        localStorage.setItem("userToken",res_data.token)
         setUser({
           // phone: "",
           email: "",
@@ -64,11 +64,13 @@ const Login = () => {
         navigate("/");
       }
       console.log("logined in with ", response);
+      // console.log("Number is ",response);
     } catch (error) {
       console.log("login error ", error);
     }
 
-    console.log("Login data:", user);
+    console.log("Login data:", user.phone);
+    localStorage.setItem("userNumber",user.phone)
   };
 
   const openSignup = () => {
